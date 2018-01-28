@@ -16,9 +16,8 @@
         android:gravity="center"
         android:text="@string/start_work"
         android:textAlignment="center"
-        android:textColor="@color/colorJawText"
-        android:textSize="18sp"
         android:textStyle="bold"
+        android:textAppearance="@style/WhiteTextAppearance"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -30,26 +29,116 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:text="@string/phone_number_invitation"
         android:textAppearance="@style/MainTextAppearance"
-        app:layout_constraintBottom_toTopOf="@+id/phoneNumber"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startJaw"
-        app:layout_constraintVertical_bias="0.813" />
+        app:layout_constraintTop_toBottomOf="@+id/startJaw" />
 
     <EditText
         android:id="@+id/phoneNumber"
         style="@style/EnterField"
         android:layout_width="278dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="360dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberInvitation" />
+
+    <EditText
+        android:id="@+id/scanCard"
+        style="@style/EnterField"
+        android:layout_width="162dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanCardInvitation" />
+
+    <TextView
+        android:id="@+id/scanCardInvitation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/scan_card_invitation"
+        android:textAppearance="@style/MainTextAppearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+
+    <ImageButton
+        android:id="@+id/scanCardImage"
+        android:layout_width="138dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scanCard"
+        app:layout_constraintEnd_toEndOf="@+id/scanCard"
+        app:layout_constraintStart_toStartOf="@+id/scanCard"
+        app:layout_constraintTop_toTopOf="@+id/scanCard"
+        app:srcCompat="@drawable/barcode_image_small"
+        android:onClick="scanCardRun"/>
+
+    <TextView
+        android:id="@+id/textTermsAndCond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/terms_and_conditions"
+        android:textAppearance="@style/SmallTextAppearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanCard" />
+
+    <CheckBox
+        android:id="@+id/checkTermsAndCond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checked="false"
+        android:duplicateParentState="false"
+        android:onClick="changeEnterButton"
+        app:layout_constraintBottom_toBottomOf="@+id/textTermsAndCond"
+        app:layout_constraintStart_toEndOf="@+id/textTermsAndCond"
+        app:layout_constraintTop_toTopOf="@+id/textTermsAndCond"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorGray"
+        android:bottomRightRadius="5dp"
+        android:checked="false"
+        android:enabled="false"
+        android:onClick="enterApplication"
+        android:text="@string/next_button"
+        android:textAppearance="@style/WhiteTextAppearance"
+        android:textIsSelectable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTermsAndCond" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,7 +1,13 @@
 <resources xmlns:android="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -11,11 +17,23 @@
     <style name="MainTextAppearance" parent="TextAppearance.AppCompat">
         <!--<item name="android:textStyle">bold</item>-->
         <item name="android:textColor">#4b4b4b</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SmallTextAppearance" parent="TextAppearance.AppCompat">
+        <!--<item name="android:textStyle">bold</item>-->
+        <item name="android:textColor">#4b4b4b</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="WhiteTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="EnterField">
         <item name="android:background">@drawable/rounded_corners</item>
-
     </style>
+
 </resources>

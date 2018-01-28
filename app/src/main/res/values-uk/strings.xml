@@ -2,4 +2,7 @@
     <string name="app_name">MyBonus</string>
     <string name="start_work">Початок роботи</string>
     <string name="phone_number_invitation">Введіть номер телефону</string>
+    <string name="scan_card_invitation">Просканувати карту</string>
+    <string name="terms_and_conditions">Погоджуюсь з Умовами використання</string>
+    <string name="next_button">Далі ></string>
 </resources>
