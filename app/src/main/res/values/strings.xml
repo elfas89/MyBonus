@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyBonus</string>
+    <string name="start_work">Start of Work</string>
+    <string name="phone_number_invitation">Enter phone number</string>
+</resources>

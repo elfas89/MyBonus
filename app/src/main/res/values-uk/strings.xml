@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyBonus</string>
+    <string name="start_work">Початок роботи</string>
+    <string name="phone_number_invitation">Введіть номер телефону</string>
+</resources>
