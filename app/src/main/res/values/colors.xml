@@ -3,10 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#329600</color>
-    <color name="colorLoginBackground">#ffe164</color>
-    <color name="colorJawBackground">#ff0000</color>
+    <color name="colorLoginBackground">#ffca00</color>
+    <color name="colorJawBackground">#ed2510</color>
     <color name="colorJawText">#ffffff</color>
     <color name="colorPhoneNumberBackground">#ffffff</color>
     <color name="colorGray">#c0c0c0</color>
-    <color name="colorPurple">#800080</color>
+    <!--<color name="colorPurple">#800080</color>-->
+    <color name="colorPurple">#610345</color>
 </resources>
