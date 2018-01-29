@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     //22222
     //
     //from ands
+    //FROM BRA4O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
