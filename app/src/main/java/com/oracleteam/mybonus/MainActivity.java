@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 // ПЫЩ!!
+    // try to commit into WORKING matafakaz
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
