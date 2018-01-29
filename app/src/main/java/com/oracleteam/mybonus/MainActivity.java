@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     // try to commit into WORKING matafakaz
     //22222
     //
+    //from ands
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
