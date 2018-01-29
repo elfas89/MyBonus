@@ -21,33 +21,11 @@ public class MainActivity extends AppCompatActivity {
     private  static  int SPLASH_TIME_OUT = 8000;
 
 
-// ПЫЩ!!
-    // try to commit into WORKING matafakaz
-    //22222
-    //
-    //from ands
-    //FROM BRA4O
-    //from ands 2
-    //from ands 3 work
+// do not need any comments here
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-        //splash screen
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        },SPLASH_TIME_OUT);
-
-
-
 
 //    CheckBox checkTermsAndCond = findViewById(R.id.checkTermsAndCond);
 //    Button enterButton = findViewById(R.id.enterButton);
