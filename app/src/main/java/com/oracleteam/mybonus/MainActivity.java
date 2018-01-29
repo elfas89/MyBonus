@@ -2,17 +2,23 @@ package com.oracleteam.mybonus;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     final String TAG = "myLogs";
+
+    private  static  int SPLASH_TIME_OUT = 8000;
 
 
 
@@ -22,8 +28,46 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
+        //splash screen
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        },SPLASH_TIME_OUT);
+
+
+
+
 //    CheckBox checkTermsAndCond = findViewById(R.id.checkTermsAndCond);
 //    Button enterButton = findViewById(R.id.enterButton);
+
+
+
+
+
+        String text = "";
+        String link = getResources().getString(R.string.terms_and_conditions_link);
+        String linkStart = " <a href='"+ link +"'> ";
+        String linkEnd = " </a>";
+
+        TextView textTermsAndCond = findViewById(R.id.textTermsAndCond);
+        textTermsAndCond.setClickable(true);
+        textTermsAndCond.setMovementMethod(LinkMovementMethod.getInstance());
+//        text = "Agreee with <a href='http://www.google.com'> Google </a>";
+//        text = getResources().getString((R.string.terms_and_conditions_link));
+
+        text = getResources().getString(R.string.terms_and_conditions_part1) + linkStart + getResources().getString(R.string.terms_and_conditions_part2) + linkEnd;
+
+        textTermsAndCond.setText(Html.fromHtml(text));
+
+
+
+
+
 
 
     }
