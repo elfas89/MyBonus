@@ -13,6 +13,7 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
+        //start MainActivity and finish splash screen
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();

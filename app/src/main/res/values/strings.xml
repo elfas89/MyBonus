@@ -3,9 +3,12 @@
     <string name="start_work">Start of Work</string>
     <string name="phone_number_invitation">Enter phone number</string>
     <string name="scan_card_invitation">Scan a card</string>
+    <string name="choice_invitation">OR</string>
     <string name="terms_and_conditions">Agree with Terms and Conditions</string>
     <string name="terms_and_conditions_part1">Agree with</string>
     <string name="terms_and_conditions_part2">Terms and Conditions</string>
     <string name="terms_and_conditions_link" translatable="false">http://www.google.com</string>
     <string name="next_button">Next ></string>
+    <string name="card_number" translatable="false">XXXXXXXXXXXXX</string>
+    <string name="phone_prefix" translatable="false">+38</string>
 </resources>

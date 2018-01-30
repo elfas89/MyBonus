@@ -3,6 +3,7 @@
     <string name="start_work">Початок роботи</string>
     <string name="phone_number_invitation">Введіть номер телефону</string>
     <string name="scan_card_invitation">Сканувати карту</string>
+    <string name="choice_invitation">АБО</string>
     <string name="terms_and_conditions">Погоджуюсь з Умовами використання</string>
     <string name="terms_and_conditions_part1">Погоджуюсь з</string>
     <string name="terms_and_conditions_part2">Умовами використання</string>
