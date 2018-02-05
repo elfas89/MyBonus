@@ -11,5 +11,13 @@
     <string name="next_button">Next ></string>
     <string name="card_number" translatable="false">XXXXXXXXXXXXX</string>
     <string name="phone_prefix" translatable="false">+38</string>
+    <string name="scan">Scan</string>
+    <string name="barcode_button">Card</string>
+    <string name="locations_button">Locations</string>
+    <string name="discount_button">Discount</string>
+    <string name="logout_button">Logout</string>
+    <string name="app_page">Main Page</string>
+    <string name="locations_page">Locations Page</string>
+    <string name="discount_page">Discount Page</string>
     <string name="sms_text">password from SMS</string>
 </resources>

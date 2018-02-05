@@ -134,7 +134,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         // need to validate user and phone via sms
-        Intent intent = new Intent(this, SmsActivity.class);
+    //    Intent intent = new Intent(this, SmsActivity.class);
+        Intent intent = new Intent(this, ApplicationActivity.class);
         startActivity(intent);
 
 

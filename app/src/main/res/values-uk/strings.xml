@@ -8,5 +8,13 @@
     <string name="terms_and_conditions_part1">Погоджуюсь з</string>
     <string name="terms_and_conditions_part2">Умовами використання</string>
     <string name="next_button">Далі ></string>
+    <string name="scan">Сканувати</string>
+    <string name="barcode_button">Картка</string>
+    <string name="locations_button">Магазини</string>
+    <string name="discount_button">Знижка</string>
+    <string name="logout_button">Вийти</string>
+    <string name="app_page">Головна сторінка</string>
+    <string name="Магазини">Locations Page</string>
+    <string name="Знижка">Discount Page</string>
     <string name="sms_text">пароль з SMS</string>
 </resources>
