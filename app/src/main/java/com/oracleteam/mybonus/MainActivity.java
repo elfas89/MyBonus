@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     final int PHONE_NUMBER_LENGTH = 10;
     final int BARCODE_LENGTH = 13;
 
+    protected  static  final String TO_VALIDATE = "com.oracleteam.mybonus.MESSAGE";
 
 
 
@@ -115,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
 
     protected void enterApplication(View view){
 
+
+
         // bunch of validations here
         EditText phoneNumber = findViewById(R.id.phoneNumber);
         TextView cardNumber = findViewById(R.id.cardNumber);
@@ -123,10 +126,26 @@ public class MainActivity extends AppCompatActivity {
         int cardNumberLength = cardNumber.getText().length();
 
         Log.d(LOG_TAG, "phoneNumberLength: " + phoneNumberLength);
-        Log.d(LOG_TAG, "cardNumberLength: " + cardNumberLength);
+        Log.d(LOG_TAG, "cardNumberLength: " + cardNumberLength); //check for XXXs!
 
-        Intent intent = new Intent(this, ApplicationActivity.class);
+
+        // ....
+
+
+
+        // need to validate user and phone via sms
+        Intent intent = new Intent(this, SmsActivity.class);
         startActivity(intent);
+
+
+
+        // Do something in response to button
+//        Intent intent = new Intent(this, DisplayMessageActivity.class);
+//        EditText editText = (EditText) findViewById(R.id.editText);
+//        String message = editText.getText().toString();
+//        intent.putExtra(EXTRA_MESSAGE, message);
+//        startActivity(intent);
+
     }
 
 }

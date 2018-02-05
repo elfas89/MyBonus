@@ -8,4 +8,5 @@
     <string name="terms_and_conditions_part1">Погоджуюсь з</string>
     <string name="terms_and_conditions_part2">Умовами використання</string>
     <string name="next_button">Далі ></string>
+    <string name="sms_text">пароль з SMS</string>
 </resources>
