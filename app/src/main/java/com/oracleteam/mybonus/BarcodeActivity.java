@@ -1,5 +1,7 @@
 package com.oracleteam.mybonus;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -31,7 +33,66 @@ public class BarcodeActivity extends AppCompatActivity {
         /*GET BARCODE DATA FROM LOCAL DATABASE HERE!!!*/
         ///////////////////////////////////////////////
 
-        String barcode_data = "9789667484552";
+        DBHelper dbHelper;
+
+
+        String barcode_data;
+        barcode_data = "9789667484552";
+
+
+        Log.d(LOG_TAG, "before new DBHelper");
+
+        // создаем объект для создания и управления версиями БД
+        dbHelper = new DBHelper(this);
+
+        Log.d(LOG_TAG, "after new DBHelper");
+
+        // подключаемся к БД
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        Log.d(LOG_TAG, "after conn to DB");
+
+
+
+        //try to select this shit
+        // делаем запрос всех данных из таблицы aid_user, получаем Cursor
+        Cursor c = db.query("aid_user", null, null, null, null, null, null);
+
+// ставим позицию курсора на первую строку выборки
+        // если в выборке нет строк, вернется false
+        if (c.moveToFirst()) {
+
+            // определяем номера столбцов по имени в выборке
+//            int idColIndex = c.getColumnIndex("id");
+//            int nameColIndex = c.getColumnIndex("name");
+            int barcodeIndex = c.getColumnIndex("barcode");
+
+            do {
+                // получаем значения по номерам столбцов и пишем все в лог
+                Log.d(LOG_TAG,
+                        "barcodeIndex = " + c.getInt(barcodeIndex));
+                // переход на следующую строку
+                // а если следующей нет (текущая - последняя), то false -
+                // выходим из цикла
+
+
+                barcode_data = c.getString(barcodeIndex);
+
+
+            } while (c.moveToNext());
+        } else
+            Log.d(LOG_TAG, "0 rows");
+        c.close();
+
+
+
+        Log.d(LOG_TAG, barcode_data);
+
+        // закрываем подключение к БД
+        dbHelper.close();
+
+
+
         Bitmap bitmap = null;
         try {
             bitmap = encodeAsBitmap(barcode_data, BarcodeFormat.EAN_13, 600, 300);

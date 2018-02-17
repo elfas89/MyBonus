@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String LOG_TAG = "myLogs";
+    final String LOG_TAG = "MyLogs";
     final int PHONE_NUMBER_LENGTH = 10;
     final int BARCODE_LENGTH = 13;
 
@@ -128,15 +128,30 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "phoneNumberLength: " + phoneNumberLength);
         Log.d(LOG_TAG, "cardNumberLength: " + cardNumberLength); //check for XXXs!
 
+        String ph = phoneNumber.getText().toString();
+
 
         // ....
 
 
 
         // need to validate user and phone via sms
-    //    Intent intent = new Intent(this, SmsActivity.class);
-        Intent intent = new Intent(this, ApplicationActivity.class);
+
+
+        Intent intent = new Intent(this, SmsActivity.class);
+
+
+//        Intent intent = new Intent(this, ApplicationActivity.class);
+
+        intent.putExtra("phone", ph);
+
         startActivity(intent);
+
+
+        //finish();
+
+
+
 
 
 
@@ -146,6 +161,10 @@ public class MainActivity extends AppCompatActivity {
 //        String message = editText.getText().toString();
 //        intent.putExtra(EXTRA_MESSAGE, message);
 //        startActivity(intent);
+
+
+        //select user's info from DB
+
 
     }
 

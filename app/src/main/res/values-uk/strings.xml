@@ -14,7 +14,7 @@
     <string name="discount_button">Знижка</string>
     <string name="logout_button">Вийти</string>
     <string name="app_page">Головна сторінка</string>
-    <string name="Магазини">Locations Page</string>
-    <string name="Знижка">Discount Page</string>
     <string name="sms_text">пароль з SMS</string>
+    <string name="locations_page">Магазини</string>
+    <string name="discount_page">Знижка</string>
 </resources>
